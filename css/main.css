@@ -96,7 +96,8 @@ header nav ul li a {
   -ms-transition: 0.2s;
   -o-transition: 0.2s;
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li .active {
   position: relative;
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
@@ -165,7 +166,7 @@ header nav .list-menu {
 }
 .landing .text {
   background-color: rgba(25, 200, 250, 0.6);
-  padding: 40px;
+  padding: 50px;
   position: absolute;
   width: 50%;
   top: 50%;
@@ -196,9 +197,60 @@ header nav .list-menu {
   line-height: 25px;
   font-weight: 100;
 }
+.landing .fa-arrow {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.landing .arrow-left {
+  left: 20px;
+}
+.landing .arrow-right {
+  right: 20px;
+}
+.landing .bullets {
+  width: 65px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.landing .bullets .bullet {
+  color: white;
+  font-size: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.landing .bullets .bullet:nth-of-type(2) {
+  color: var(--main-color);
+  background-color: var(--main-color);
+}
+
 @media (max-width: 767.9px) {
   .landing .text {
+    top: 55%;
     width: 100%;
     justify-content: center;
+  }
+  .landing .content p {
+    text-align: center;
+  }
+  .landing .fa-arrow {
+    top: 55%;
   }
 }
