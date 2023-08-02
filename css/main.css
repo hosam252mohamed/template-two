@@ -11,6 +11,7 @@
   --main-color: #19c8fa;
   --second-color: #3a1f95;
   --main-bg-color: #09161e;
+  --transparent-main-color: rgba(25, 200, 250, 0.6);
   --main-padding: 50px;
   --main-p-color: #777;
   --transition-duration: 0.3s;
@@ -69,6 +70,14 @@ ul {
   color: var(--main-p-color);
   font-size: 14px;
   margin-bottom: 70px;
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+}
+@media (max-width: 768px) {
+  .main-heading .section-name + p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .overlay {
   background-color: rgb(0 0 0 / 25%);
@@ -212,7 +221,7 @@ header nav .list-menu {
   position: relative;
 }
 .landing .text {
-  background-color: rgba(25, 200, 250, 0.6);
+  background-color: var(--transparent-main-color);
   padding: 50px;
   position: absolute;
   width: 50%;
@@ -349,8 +358,6 @@ header nav .list-menu {
 }
 @media (max-width: 768px) {
   .services .main-heading p {
-    max-width: 550px;
-    margin: 0 auto 50px auto;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -411,7 +418,7 @@ header nav .list-menu {
 }
 .design .design-content .text {
   position: absolute;
-  background-color: rgba(25, 200, 250, 0.6);
+  background-color: var(--transparent-main-color);
   color: white;
   padding: 30px;
   width: 50%;
@@ -437,7 +444,7 @@ header nav .list-menu {
 }
 @media (max-width: 768px) {
   .design {
-    height: 790px;
+    height: 785px;
   }
   .design .design-content .text {
     width: 100%;
@@ -454,6 +461,7 @@ header nav .list-menu {
   }
   .design .design-content .text .feat i {
     margin-bottom: 14px;
+    font-size: 22px;
   }
   .design .design-content img {
     width: 250px;
@@ -474,4 +482,115 @@ header nav .list-menu {
   .design .design-content img {
     left: 150px;
   }
+}
+
+.protofolio {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.protofolio .shuffle {
+  margin-bottom: 20px;
+}
+.protofolio .shuffle ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.protofolio .shuffle ul li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 3px;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+.protofolio .shuffle ul .active {
+  color: white;
+  background-color: var(--main-color);
+}
+.protofolio .shuffle ul li:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+.protofolio .content-container {
+  margin-bottom: 15px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.protofolio .content-container .box {
+  flex-basis: calc(25% - 6px);
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .protofolio .content-container .box {
+    flex-basis: calc((100% / 3) - 6px);
+  }
+}
+@media (max-width: 768px) {
+  .protofolio .content-container .box {
+    flex-basis: calc(50% - 6px);
+  }
+}
+@media (max-width: 600px) {
+  .protofolio .content-container .box {
+    flex-basis: calc(100% - 6px);
+  }
+}
+.protofolio .content-container .box img {
+  width: 100%;
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+.protofolio .content-container .box .caption {
+  position: absolute;
+  width: calc(100%);
+  padding: 10px;
+  padding-left: 16px;
+  background-color: rgb(25 200 250 / 0.77);
+  cursor: pointer;
+  color: white;
+  bottom: -100%;
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+.protofolio .content-container .box .caption h3 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.protofolio .content-container .box .caption h4 {
+  font-weight: 700;
+  margin-top: 8px;
+  font-size: 12px;
+  color: black;
+}
+.protofolio .content-container .box:hover .caption {
+  bottom: 0px;
+}
+.protofolio .content-container .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+  -webkit-transform: rotate(3deg) scale(1.1);
+  -moz-transform: rotate(3deg) scale(1.1);
+  -ms-transform: rotate(3deg) scale(1.1);
+  -o-transform: rotate(3deg) scale(1.1);
+}
+.protofolio .more {
+  display: block;
+  width: 75px;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
 }
