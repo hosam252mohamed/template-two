@@ -11,6 +11,8 @@
   --main-color: #19c8fa;
   --main-bg-color: #09161e;
   --main-padding: 50px;
+  --main-p-color: #777;
+  --transition-duration: 0.3s;
 }
 
 html {
@@ -36,9 +38,9 @@ ul {
   text-align: center;
 }
 .main-heading .section-name {
-  font-size: 30px;
+  font-size: 32px;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 57px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -62,7 +64,9 @@ ul {
   bottom: -31px;
 }
 .main-heading .section-name + p {
-  color: #777;
+  color: var(--main-p-color);
+  font-size: 14px;
+  margin-bottom: 70px;
 }
 
 /* Small */
@@ -248,6 +252,18 @@ header nav .list-menu {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+  opacity: 0;
+  transition: var(--transition-duration);
+  -webkit-transition: var(--transition-duration);
+  -moz-transition: var(--transition-duration);
+  -ms-transition: var(--transition-duration);
+  -o-transition: var(--transition-duration);
+}
+.landing .text:hover + a .fa-arrow {
+  opacity: 1;
+}
+.landing .text:hover + a + a .fa-arrow {
+  opacity: 1;
 }
 .landing .arrow-left {
   left: 20px;
@@ -299,4 +315,65 @@ header nav .list-menu {
 .services {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
+}
+.services .serv-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+}
+.services .serv-content .serv {
+  display: flex;
+}
+.services .serv-content .serv i {
+  color: #503d90;
+  font-size: 30px;
+}
+.services .serv-content .serv .text {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.services .serv-content .serv .text h3 {
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.services .serv-content .serv .text p {
+  line-height: 22px;
+  font-size: 15px;
+  color: var(--main-p-color);
+  max-width: 515px;
+}
+@media (max-width: 768px) {
+  .services .main-heading p {
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .services .serv-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .services .serv-content .serv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services .serv-content .serv .text {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  .services .serv-content .serv .text h3 {
+    margin: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .services .serv-content {
+    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+  }
 }
