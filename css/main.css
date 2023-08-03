@@ -220,6 +220,17 @@ header nav .list-menu {
   height: 100vh;
   position: relative;
 }
+.landing .landing-content {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
 .landing .text {
   background-color: var(--transparent-main-color);
   padding: 50px;
@@ -270,10 +281,7 @@ header nav .list-menu {
   -ms-transition: var(--transition-duration);
   -o-transition: var(--transition-duration);
 }
-.landing .text:hover + a .fa-arrow {
-  opacity: 1;
-}
-.landing .text:hover + a + a .fa-arrow {
+.landing .landing-content:hover a .fa-arrow {
   opacity: 1;
 }
 .landing .arrow-left {
@@ -310,6 +318,9 @@ header nav .list-menu {
 }
 
 @media (max-width: 767.9px) {
+  .landing .landing-content {
+    height: 55%;
+  }
   .landing .text {
     top: 55%;
     width: 100%;
