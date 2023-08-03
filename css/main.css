@@ -444,13 +444,14 @@ header nav .list-menu {
 }
 @media (max-width: 768px) {
   .design {
-    height: 785px;
+    height: 860px;
   }
   .design .design-content .text {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    top: 50px;
   }
   .design .design-content .text h2 {
     text-align: center;
@@ -465,7 +466,7 @@ header nav .list-menu {
   }
   .design .design-content img {
     width: 250px;
-    bottom: -435px;
+    bottom: -510px;
   }
 }
 @media (max-width: 992px) {
@@ -540,6 +541,9 @@ header nav .list-menu {
   .protofolio .content-container .box {
     flex-basis: calc(100% - 6px);
   }
+  .protofolio .content-container {
+    justify-content: center;
+  }
 }
 .protofolio .content-container .box img {
   width: 100%;
@@ -593,4 +597,72 @@ header nav .list-menu {
   background-color: var(--main-color);
   color: white;
   padding: 10px;
+}
+
+.video {
+  background-image: url("../imgs/video-bg.jpg");
+  background-size: contain;
+  width: 100%;
+  position: relative;
+}
+.video .bg-video {
+  position: relative;
+}
+.video .bg-video video {
+  width: 100%;
+}
+.video .bg-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 40%);
+}
+.video .text-container {
+  background-color: var(--transparent-main-color);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.video .text-container h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+.video .text-container p {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+.video .text-container a {
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+@media (max-width: 550px) {
+  .video .text-container {
+    padding: 30px;
+  }
+  .video .text-container h3 {
+    font-size: 18px;
+  }
+  .video .text-container p {
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 23px;
+  }
+  .video .text-container a {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
 }
