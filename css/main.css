@@ -730,10 +730,26 @@ header nav .list-menu {
   text-align: center;
 }
 .statcs .statcs-content .stat i {
-  font-size: 25px;
+  font-size: 16px;
+  background-color: black;
+  padding: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.statcs .statcs-content .stat:last-of-type i {
+  font-size: 18px;
 }
 .statcs .statcs-content .stat h2 {
-  margin: 15px;
+  margin: 20px;
   font-size: 40px;
 }
 .statcs .statcs-content .stat h3 {
@@ -743,6 +759,10 @@ header nav .list-menu {
 @media (max-width: 992px) {
   .statcs .container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 55px 20px;
+  }
+  .statcs .statcs-content .stat h2 {
+    margin: 15px;
   }
 }
 @media (max-width: 768px) {
