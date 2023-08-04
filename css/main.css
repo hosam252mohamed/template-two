@@ -770,3 +770,164 @@ header nav .list-menu {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.all-skills {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.all-skills .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.all-skills .test {
+  flex-basis: 45%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.all-skills .head {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.all-skills .head h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.all-skills .head p {
+  color: #aaa;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.all-skills .test .person {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.all-skills .test .person img {
+  width: 75px;
+}
+.all-skills .test .person .caption {
+  padding-left: 55px;
+  max-width: 550px;
+  position: relative;
+}
+.all-skills .test .person .caption::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 55px);
+  height: 1px;
+  bottom: -12px;
+  left: 55px;
+  background-color: #aaa;
+}
+.all-skills .test .person .caption .name {
+  font-size: 15px;
+  color: #aaa;
+  text-align: right;
+  font-style: italic;
+  margin-top: 5px;
+}
+.all-skills .bullets {
+  width: 65px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.all-skills .bullets .bullet {
+  color: black;
+  font-size: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.all-skills .bullets .bullet:nth-of-type(2) {
+  color: var(--main-color);
+  background-color: var(--main-color);
+}
+@media (max-width: 768px) {
+  .all-skills .test .person {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .all-skills .test .person img {
+    margin-bottom: 10px;
+  }
+  .all-skills .test .person .caption {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .all-skills .test .person .caption::before {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  .all-skills .test .person .caption p {
+    margin-bottom: 10px;
+  }
+}
+.all-skills .content .skills {
+  flex-basis: 45%;
+}
+.all-skills .skills .prog-percent:not(:last-child) {
+  margin-bottom: 20px;
+}
+.all-skills .skills .prog-percent h4 {
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+.all-skills .skills .prog-percent .prog {
+  background-color: #aaa;
+  height: 30px;
+}
+.all-skills .skills .prog-percent .prog span {
+  display: block;
+  height: 100%;
+  background-color: var(--main-color);
+  position: relative;
+}
+.all-skills .skills .prog-percent .prog span::before {
+  content: attr(data-progress);
+  position: absolute;
+  padding: 7px;
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  top: -36px;
+  right: -18px;
+}
+.all-skills .skills .prog-percent .prog span::after {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-top-color: black;
+  top: -11px;
+  right: -7px;
+}
+@media (max-width: 768px) {
+  .all-skills .test,
+  .all-skills .skills {
+    flex-basis: 100% !important;
+  }
+  .all-skills .test {
+    margin-bottom: 65px;
+  }
+  .all-skills .skills {
+    padding: 10px;
+  }
+}
