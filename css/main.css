@@ -200,7 +200,7 @@ header nav .list-menu {
     top: 100%;
     left: 15px;
     padding-left: 6px;
-    background-color: rgb(0 0 0 / 25%);
+    background-color: rgb(0 0 0 / 75%);
     border-radius: 0 0 5px 5px;
     -webkit-border-radius: 0 0 5px 5px;
     -moz-border-radius: 0 0 5px 5px;
@@ -615,6 +615,7 @@ header nav .list-menu {
   background-size: contain;
   width: 100%;
   position: relative;
+  margin-top: -15px;
 }
 .video .bg-video {
   position: relative;
@@ -675,5 +676,35 @@ header nav .list-menu {
   .video .text-container a {
     font-size: 11px;
     padding: 8px 12px;
+  }
+}
+
+.about {
+  padding-top: var(--main-padding);
+  text-align: center;
+  overflow: hidden;
+}
+.about .main-heading p {
+  margin-bottom: 75px;
+}
+.about img {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  bottom: -62px;
+  margin-top: -62px;
+}
+@media (max-width: 768px) {
+  .about img {
+    bottom: -45px;
+    margin-top: -45px;
+  }
+}
+@media (max-width: 500px) {
+  .about img {
+    bottom: -28px;
+    margin-top: -28px;
   }
 }
