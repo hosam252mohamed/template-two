@@ -636,7 +636,7 @@ header nav .list-menu {
   text-align: center;
   padding: 50px;
   position: absolute;
-  top: 50%;
+  top: 49%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -706,5 +706,47 @@ header nav .list-menu {
   .about img {
     bottom: -28px;
     margin-top: -28px;
+  }
+}
+
+.statcs {
+  background-image: url("../imgs/statcs.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.statcs .statcs-content {
+  background-color: var(--transparent-main-color);
+}
+.statcs .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px;
+  padding: 35px;
+}
+.statcs .statcs-content .stat {
+  color: white;
+  text-align: center;
+}
+.statcs .statcs-content .stat i {
+  font-size: 25px;
+}
+.statcs .statcs-content .stat h2 {
+  margin: 15px;
+  font-size: 40px;
+}
+.statcs .statcs-content .stat h3 {
+  font-size: 12px;
+  font-weight: 400;
+}
+@media (max-width: 992px) {
+  .statcs .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .statcs .container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
