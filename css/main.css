@@ -910,6 +910,11 @@ header nav .list-menu {
   font-size: 12px;
   top: -36px;
   right: -18px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 .all-skills .skills .prog-percent .prog span::after {
   content: "";
@@ -930,4 +935,52 @@ header nav .list-menu {
   .all-skills .skills {
     padding: 10px;
   }
+}
+
+.qoute {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-image: url("../imgs/qoute.png");
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.qoute::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(0 0 0 / 45%);
+}
+.qoute .container {
+  position: relative;
+  padding: 30px;
+}
+.qoute q {
+  display: block;
+  max-width: 685px;
+  margin: 0 auto;
+  font-weight: 500;
+  line-height: 22px;
+}
+.qoute q::before {
+  content: "\f10d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 3px;
+}
+.qoute q::after {
+  content: "\f10e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: 3px;
+}
+.qoute p {
+  color: #dcdcdc;
+  margin-top: 10px;
+  font-size: 15px;
+  font-style: italic;
 }
