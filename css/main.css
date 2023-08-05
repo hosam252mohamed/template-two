@@ -52,19 +52,21 @@ ul {
   content: "";
   position: absolute;
   width: 100px;
-  height: 1.5px;
+  height: 2px;
   background-color: black;
   bottom: -25px;
 }
 .main-heading .section-name::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: white;
   border: 2px solid black;
   border-radius: 50%;
-  bottom: -31px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .main-heading .section-name + p {
   color: var(--main-p-color);
@@ -983,4 +985,148 @@ header nav .list-menu {
   margin-top: 10px;
   font-size: 15px;
   font-style: italic;
+}
+
+.pricing {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 60px 40px;
+}
+.plans .plan {
+  text-align: center;
+}
+.plans .plan .type-price {
+  padding: 30px;
+  position: relative;
+}
+.plans .plan .type-price::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background-color: var(--main-color);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.plans .plan .type-price::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.plans .plan .type-price .type {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.plans .plan .type-price h2 {
+  margin-top: 10px;
+  font-size: 45px;
+  font-weight: 600;
+  position: relative;
+  left: 5px;
+}
+.plans .plan .type-price h2::before {
+  content: "$";
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  top: -20px;
+  left: -5px;
+}
+.plans .plan .type-price h2::after {
+  content: "/MO";
+  position: relative;
+  font-size: 11px;
+  font-weight: 500;
+  left: 5px;
+}
+
+.plans .plan .features {
+  padding-top: 20px;
+  margin-bottom: 45px;
+}
+.plans .plan .features li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.plans .plan .features li:first-child {
+  padding-top: 5px;
+}
+.plans .plan .features li:last-child {
+  padding-bottom: 25px;
+}
+.plans .plan .features li:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 140px;
+  height: 1px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.plans .plan .features li:last-of-type::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.plans .plan .buy {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 2px solid var(--main-color);
+  font-size: 15px;
+}
+
+.pricing .contact-part {
+  text-align: center;
+  margin-top: 70px;
+}
+.pricing .contact-part p {
+  margin-bottom: 35px;
+}
+.pricing .contact-part a {
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-color);
+  padding: 12px 18px;
 }
