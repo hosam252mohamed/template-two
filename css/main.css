@@ -995,10 +995,11 @@ header nav .list-menu {
 .plans {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 60px 40px;
+  gap: 40px;
 }
 .plans .plan {
   text-align: center;
+  background-color: #fcfcfc;
 }
 .plans .plan .type-price {
   padding: 30px;
@@ -1063,7 +1064,6 @@ header nav .list-menu {
 
 .plans .plan .features {
   padding-top: 20px;
-  margin-bottom: 45px;
 }
 .plans .plan .features li {
   padding-top: 20px;
@@ -1113,6 +1113,9 @@ header nav .list-menu {
   padding: 10px 15px;
   border: 2px solid var(--main-color);
   font-size: 15px;
+  display: block;
+  max-width: 105px;
+  margin: 30px auto;
 }
 
 .pricing .contact-part {
@@ -1129,4 +1132,79 @@ header nav .list-menu {
   color: white;
   background-color: var(--main-color);
   padding: 12px 18px;
+}
+
+.subscribe {
+  background-image: url("../imgs/subscribe.jpg");
+  background-position: center;
+  position: relative;
+  padding: var(--main-padding) 0;
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(0 0 0 / 40%);
+}
+.subscribe .sub-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.subscribe .sub-content p {
+  flex-basis: 50%;
+  color: white;
+  font-size: 15px;
+  line-height: 22px;
+}
+.subscribe .sub-content form {
+  flex-basis: 50%;
+  max-width: 100%;
+  position: relative;
+  display: flex;
+}
+.subscribe form i {
+  color: white;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subscribe form input[type="email"] {
+  padding: 15px 15px 15px 40px;
+  background: none;
+  border: 1.5px solid white;
+  border-right: none;
+  width: calc(100% - 100px);
+  caret-color: var(--main-color);
+  color: white;
+}
+.subscribe form input[type="email"]::placeholder {
+  color: white;
+  font-size: 15px;
+}
+.subscribe form input[type="submit"] {
+  width: 100px;
+  color: white;
+  background-color: var(--main-color);
+  border: 1.5px solid white;
+  border-left: none;
+  font-size: 15px;
+}
+.subscribe form input:focus {
+  outline: none;
+}
+@media (max-width: 992px) {
+  .subscribe .sub-content {
+    flex-direction: column;
+  }
+  .subscribe .sub-content p {
+    text-align: center;
+  }
 }
