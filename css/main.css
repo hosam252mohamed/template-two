@@ -1188,6 +1188,7 @@ header nav .list-menu {
   font-size: 15px;
 }
 .subscribe form input[type="submit"] {
+  cursor: pointer;
   width: 100px;
   color: white;
   background-color: var(--main-color);
@@ -1203,6 +1204,92 @@ header nav .list-menu {
     flex-direction: column;
   }
   .subscribe .sub-content p {
+    text-align: center;
+  }
+}
+
+.contact {
+  padding: var(--main-padding) 0;
+}
+
+.contact .content {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .contact .content {
+    flex-direction: column;
+  }
+}
+.contact .content form {
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.contact .content form .input:not(:last-child) {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.contact .content form .input:focus {
+  outline: none;
+  border: 1.5px solid var(--main-color);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.contact .content form .input::placeholder {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.contact .content form textarea {
+  height: 200px;
+}
+.contact .content form input[type="submit"] {
+  margin-left: auto;
+  padding: 15px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+}
+.contact .content .info {
+  flex-basis: 25%;
+}
+.contact .content .info h4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.contact .content .info .in-touch {
+  margin-bottom: 50px;
+}
+.contact .content .info .in-touch .phone,
+.contact .content .info .where address {
+  line-height: 25px;
+  color: #777;
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .contact .content .info {
+    order: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .contact .content .info h4 {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .contact .content .info {
+    flex-direction: column;
+  }
+  .contact .content .info .in-touch {
+    margin-bottom: 30px;
+  }
+  .contact .content .info .where {
     text-align: center;
   }
 }
